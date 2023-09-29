@@ -1,6 +1,8 @@
 import random
 
-class Tad:
+import json
+
+class Tad: # Clase Tipo de datos abstractos
 
     random_max = 10
 
@@ -13,6 +15,7 @@ class Tad:
         self.pila = []
         self.cola = []
 
+        self.dic_intervalos_tarifas = {}
 
     def cargar_vector(self):
         for i in range(self.tope):
@@ -60,3 +63,9 @@ class Tad:
     def presentar_cola(self):
         for c in self.cola:
             print(c)
+
+
+    def cargar_rango_intervalos_tarifas(self):
+        f = open('introduccion/rango-intervalos-tarifas.json')
+        self.dic_intervalos_tarifas= json.load(f)
+        #print(self.dic_intervalos_tarifas)

@@ -7,7 +7,7 @@ class Persona:
         self.ciudad = ciudad
 
     def __str__(self):
-        return f'{self.cedula}:{self.nombre} {self.apellido}'
+        return f'{self.cedula}:{self.nombre} {self.apellido}: {self.ciudad}'
 
 class Cliente(Persona):
 

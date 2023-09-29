@@ -1,0 +1,142 @@
+{
+    "1": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 1
+    },
+    "2": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 2
+    },
+    "3": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 3
+    },
+    "4": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 4
+    },
+    "5": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 5
+    },
+    "6": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 6
+    },
+    "7": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 7
+    },
+    "8": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 8
+    },
+    "9": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 9
+    },
+    "10": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 10
+    },
+    "11": {
+        "cost": 3090,
+        "price": 3635,
+        "top_limit": 11
+    },
+    "12": {
+        "cost": 3090,
+        "price": 3635,
+        "top_limit": 12
+    },
+    "13": {
+        "cost": 3090,
+        "price": 3635,
+        "top_limit": 13
+    },
+    "14": {
+        "cost": 3090,
+        "price": 3635,
+        "top_limit": 14
+    },
+    "15": {
+        "cost": 3090,
+        "price": 3635,
+        "top_limit": 15
+    },
+    "16": {
+        "cost": 4490,
+        "price": 5282,
+        "top_limit": 16
+    },
+    "17": {
+        "cost": 4490,
+        "price": 5282,
+        "top_limit": 17
+    },
+    "18": {
+        "cost": 4490,
+        "price": 5282,
+        "top_limit": 18
+    },
+    "19": {
+        "cost": 4490,
+        "price": 5282,
+        "top_limit": 19
+    },
+    "20": {
+        "cost": 4490,
+        "price": 5282,
+        "top_limit": 20
+    },
+    "21": {
+        "cost": 9990,
+        "price": 11753,
+        "top_limit": 21
+    },
+    "22": {
+        "cost": 9990,
+        "price": 11753,
+        "top_limit": 22
+    },
+    "23": {
+        "cost": 9990,
+        "price": 11753,
+        "top_limit": 23
+    },
+    "24": {
+        "cost": 9990,
+        "price": 11753,
+        "top_limit": 24
+    },
+    "25": {
+        "cost": 9990,
+        "price": 11753,
+        "top_limit": 25
+    },
+    "0.5": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 0.5
+    },
+    "1.5": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 1.5
+    },
+    "2.5": {
+        "cost": 2390,
+        "price": 2812,
+        "top_limit": 2.5
+    }
+}
