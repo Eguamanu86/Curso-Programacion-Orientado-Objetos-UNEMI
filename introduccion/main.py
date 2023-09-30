@@ -4,6 +4,9 @@ tad = Tad(5) # tope= 5
 #tad.cargar_vector()
 tad.cargar_rango_intervalos_tarifas()
 
+value = tad.get_buscar_precio_para_peso(5)
+print(value['price'])
+
 # cliente1 = Cliente('09264006151','Ernesto','Guaman', 'Milagro', 1000)
 # cliente2 = Cliente('09899998887','Juan','Perez', 'Cuenca', 500)
 

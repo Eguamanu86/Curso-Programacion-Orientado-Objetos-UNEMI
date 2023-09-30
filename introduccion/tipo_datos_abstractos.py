@@ -69,3 +69,37 @@ class Tad: # Clase Tipo de datos abstractos
         f = open('introduccion/rango-intervalos-tarifas.json')
         self.dic_intervalos_tarifas= json.load(f)
         #print(self.dic_intervalos_tarifas)
+
+
+    def get_buscar_precio_para_peso(self, peso):
+        list_keys = list(self.dic_intervalos_tarifas.keys())
+
+        list_keys_orden =  self.orden_por_seleccion(list_keys)
+
+        key = self.get_key_por_peso(peso, list_keys_orden)
+        value = self.dic_intervalos_tarifas[key]
+
+        return value
+
+
+    def get_key_por_peso(self, peso, list_keys_orden):
+        menores_al_peso = list (filter(lambda x: float(x) <= peso, list_keys_orden))
+        return menores_al_peso.pop()
+
+    def orden_por_burbuja(self, arreglo):
+        n = len(arreglo)
+        for i in range(n-1):       # <-- bucle padre
+            for j in range(n-1-i): # <-- bucle hijo
+                if float(arreglo[j]) > float(arreglo[j+1]):
+                    arreglo[j], arreglo[j+1] = arreglo[j+1], arreglo[j]
+        return arreglo
+
+    def orden_por_seleccion(self, arreglo):
+        for i in range(len(arreglo) - 1):   # <-- bucle padre
+            menor = i # primer elemento por default será el mínimo
+            for j in range(i + 1, len(arreglo)): # <-- bucle hijo
+                if float(arreglo[j]) < float(arreglo[menor]):
+                    menor = j
+            if menor != i:
+                arreglo[menor], arreglo[i] = arreglo[i], arreglo[menor]
+        return arreglo
