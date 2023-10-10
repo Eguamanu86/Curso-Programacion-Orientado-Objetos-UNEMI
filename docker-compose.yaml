@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  django:
+    build:
+      context: ./django-backend/
+    container_name: dev-django-unemi
+    restart: always
+    ports:
+      - 0.0.0.0:8001:8000 ## externo : interno
+      - 0.0.0.0:3009:3000
+    env_file:
+      - ./.env
+    volumes:
+      - ./django-backend:/app
+      - ./django-backend/docker/nginx.conf:/etc/nginx/sites-enabled/nginx.conf
+      - ./django-backend/docker/supervisord.conf:/etc/supervisord.conf
+      - static_volume:/app/staticfiles
+      - media_volume:/app/mediafiles
+    deploy:
+      resources:
+        limits:
+          memory: $DOCKER_LIMITS_MEMORY
+          cpus: $DOCKER_LIMITS_CPUS
+    networks:
+        backend:
+            aliases:
+                - devs-django-backend-unemi
+volumes:
+  static_volume:
+  media_volume:
+
+networks:
+  backend:
+    external: true
+    name: network-docker-local
