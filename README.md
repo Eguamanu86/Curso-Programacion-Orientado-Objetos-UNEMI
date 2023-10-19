@@ -7,12 +7,11 @@ Plantilla Inicial Docker, python 3.10 y Django 4.
 
 2. Ejecutar los siguientes pasos:
 
-        docker-compose build --no-cache
-        docker-compose run --rm django django-admin startproject app .
+        1. docker-compose build
+        2. docker-compose run --rm django django-admin startproject app .
 
-3. Habilite las siguientes lineas en archivo `django-backend/Dockerfile` linea [30,31]:
+3. Habilite las siguientes lineas en archivo `django-backend/Dockerfile` linea 31:
 
-        RUN ["chmod", "+x", "/app/docker/entrypoint.sh"]
         ENTRYPOINT ["/app/docker/entrypoint.sh"]
 
 4. Vuelva a crear la Imagen Docker
@@ -28,19 +27,6 @@ Plantilla Inicial Docker, python 3.10 y Django 4.
 
 ![Optional Text](./capturas/run-server-django.PNG)
 
+## Caso de estudio - modelo UML de ventas.
 
-## En caso de no utilizar Docker, podéis utilizar entorno virtual venv
-
-        python -m venv venv
-        source venv/Scripts/activate
-        python -m pip install --upgrade pip
-        pip install -r venv-requirements.txt
-
-## Levantar servicio Django dentro de entorno virtual venv
-        cd django-backend/
-        set -a; source ../.env; set +a
-        python manage.py runserver 0.0.0.0:8001
-        Abrir navegador: http://localhost:8001/
-
-## Levantar servicio Django dentro de entorno virtual venv, con comando Make
-        Make runserver
+![Optional Text](./capturas/ventas-uml.PNG)
